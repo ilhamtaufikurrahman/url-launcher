@@ -5,14 +5,14 @@ import 'package:jcc_ilham/elements/button_purple.dart';
 import 'package:jcc_ilham/elements/input_text.dart';
 import 'package:jcc_ilham/elements/text_title.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: Text('Sign In'),
         backgroundColor: Color.fromRGBO(92, 64, 204, 1),
       ),
       body: Center(
@@ -32,19 +32,7 @@ class SignUpPage extends StatelessWidget {
                 height: 16,
               ),
               TextTitle(
-                text: 'Full Name',
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              InputText(
-                hintText: 'Your Full Name',
-              ),
-              SizedBox(
-                height: 16,
-              ),
-              TextTitle(
-                text: 'Email Address',
+                text: 'Email Address/Username',
               ),
               SizedBox(
                 height: 8,
@@ -65,29 +53,17 @@ class SignUpPage extends StatelessWidget {
                 hintText: 'Password',
               ),
               SizedBox(
-                height: 16,
-              ),
-              TextTitle(
-                text: 'Hobby',
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              InputText(
-                hintText: 'Hobby',
-              ),
-              SizedBox(
                 height: 24,
               ),
               ButtonPurple(
-                text: 'Sign Up',
+                text: 'Sign In',
               ),
               SizedBox(
                 height: 16,
               ),
               Center(
                 child: Text(
-                  'Have an account? Sign In',
+                  'Don\'t Have an account? Sign Up',
                   style: TextStyle(
                     decoration: TextDecoration.underline,
                     fontSize: 16,

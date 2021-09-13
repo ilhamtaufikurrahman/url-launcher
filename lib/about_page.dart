@@ -5,14 +5,14 @@ import 'package:jcc_ilham/elements/button_purple.dart';
 import 'package:jcc_ilham/elements/input_text.dart';
 import 'package:jcc_ilham/elements/text_title.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class AboutPage extends StatelessWidget {
+  const AboutPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: Text('About'),
         backgroundColor: Color.fromRGBO(92, 64, 204, 1),
       ),
       body: Center(
@@ -22,72 +22,65 @@ class SignUpPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Image.asset(
-                  'assets/logo.png',
-                  width: 115,
-                  height: 115,
+                  child: Container(
+                width: 135,
+                height: 135,
+                decoration: BoxDecoration(
+                    color: Color.fromRGBO(92, 64, 204, 1),
+                    shape: BoxShape.circle),
+              )),
+              SizedBox(
+                height: 16,
+              ),
+              Center(
+                child: TextTitle(
+                  text: 'Muhammad Ilham Solehudin',
                 ),
               ),
               SizedBox(
-                height: 16,
-              ),
-              TextTitle(
-                text: 'Full Name',
-              ),
-              SizedBox(
                 height: 8,
               ),
-              InputText(
-                hintText: 'Your Full Name',
+              Center(
+                child: TextTitle(
+                  text: 'Flutter Developer',
+                ),
               ),
               SizedBox(
-                height: 16,
+                height: 30,
               ),
               TextTitle(
-                text: 'Email Address',
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              InputText(
-                hintText: 'Your Email Address',
+                text: 'Personal Details',
               ),
               SizedBox(
                 height: 16,
               ),
-              TextTitle(
-                text: 'Password',
-              ),
-              SizedBox(
-                height: 8,
-              ),
               InputText(
-                hintText: 'Password',
+                hintText: 'Email',
               ),
               SizedBox(
                 height: 16,
               ),
-              TextTitle(
-                text: 'Hobby',
+              InputText(
+                hintText: 'Nomor Telepon',
               ),
               SizedBox(
-                height: 8,
+                height: 16,
               ),
               InputText(
-                hintText: 'Hobby',
+                hintText: 'Alamat',
               ),
               SizedBox(
                 height: 24,
               ),
               ButtonPurple(
-                text: 'Sign Up',
+                text: 'Sign In',
               ),
               SizedBox(
                 height: 16,
               ),
               Center(
                 child: Text(
-                  'Have an account? Sign In',
+                  'Don\'t Have an account? Sign Up',
                   style: TextStyle(
                     decoration: TextDecoration.underline,
                     fontSize: 16,
