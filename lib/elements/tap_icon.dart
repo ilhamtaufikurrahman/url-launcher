@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TapIcon extends StatelessWidget {
-  const TapIcon({
-    Key? key,
-  }) : super(key: key);
+  final String? imageUrl;
+  final String? profileUrl;
+  const TapIcon({Key? key, this.imageUrl, this.profileUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        var url = 'https://www.instagram.com/ilhamtaufikurrahman/';
+        var url = profileUrl!;
         if (await canLaunch(url)) {
           await launch(url, forceSafariVC: false);
         } else {
@@ -18,9 +18,9 @@ class TapIcon extends StatelessWidget {
         }
       },
       child: Image.network(
-        'https://statesborodowntown.com/wp-content/uploads/2016/01/instagram-Logo-PNG-Transparent-Background-download.png',
-        width: 150,
-        height: 150,
+        imageUrl!,
+        width: 24,
+        height: 24,
       ),
     );
   }
